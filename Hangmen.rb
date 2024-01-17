@@ -37,7 +37,6 @@ def random_word
   end
   
   def crypted_word(string)
-    puts string
     word = "_" * string.length
     word
   end
@@ -78,7 +77,6 @@ def random_word
       else
         json = (JSON.load File.read(self.save)).to_json
         @save_instance.from_json(json)
-        puts @save_instance.save_data
         @save_instance.display_all_saves
         puts "Choose your save file {index 0..}:"
         index = gets.chomp
